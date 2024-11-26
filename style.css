@@ -1,0 +1,8 @@
+main {
+    background-image: url('./SRC/imagens/background-img.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+}
