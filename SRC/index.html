@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vale Imobiliária</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./imagens/Logo NavBar.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                    Vale Imobiliária
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <!-- Login Button -->
+                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Login
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="text-center py-3">Bem Vindo a Vale Imobiliária</h1>
+
+        <!-- Formulário de Busca -->
+        <div class="container py-4">
+            <form class="row g-3">
+                <div class="col-md-3">
+                    <label for="inputPurpose" class="form-label">Finalidade</label>
+                    <select id="inputPurpose" class="form-select">
+                        <option selected>Escolha...</option>
+                        <option>Comprar</option>
+                        <option>Alugar</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label for="inputType" class="form-label">Tipo</label>
+                    <select id="inputType" class="form-select">
+                        <option selected>Escolha...</option>
+                        <option>Apartamento</option>
+                        <option>Casa</option>
+                        <option>Terreno</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label for="inputRooms" class="form-label">Quartos</label>
+                    <input type="number" class="form-control" id="inputRooms" placeholder="Ex.: 3">
+                </div>
+                <div class="col-md-2">
+                    <label for="inputMinValue" class="form-label">Valor Mínimo</label>
+                    <input type="number" class="form-control" id="inputMinValue" placeholder="R$">
+                </div>
+                <div class="col-md-2">
+                    <label for="inputMaxValue" class="form-label">Valor Máximo</label>
+                    <input type="number" class="form-control" id="inputMaxValue" placeholder="R$">
+                </div>
+                <div class="col-12 text-end">
+                    <button type="submit" class="btn btn-primary">Buscar</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Área de Destaques -->
+        <section class="container py-4">
+            <h2 class="text-center mb-4">Destaques</h2>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./imagens/apartamento de luxo.webp" class="card-img-top" alt="Imagem do imóvel 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Apartamento Moderno</h5>
+                            <p class="card-text">Localizado no centro da cidade, com 3 quartos e 2 banheiros. Ideal para famílias.</p>
+                            <p class="text-primary"><strong>R$ 500.000</strong></p>
+                            <a href="#" class="btn btn-primary">Ver detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./imagens/casa espaçosa.webp" class="card-img-top" alt="Imagem do imóvel 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Casa Espaçosa</h5>
+                            <p class="card-text">Bairro tranquilo, com área gourmet, 4 quartos e garagem para 2 carros.</p>
+                            <p class="text-primary"><strong>R$ 750.000</strong></p>
+                            <a href="#" class="btn btn-primary">Ver detalhes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="./imagens/cobertura com piscina.webp" class="card-img-top" alt="Imagem do imóvel 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Cobertura de Luxo</h5>
+                            <p class="card-text">Vista panorâmica, piscina privativa e acabamento de alto padrão.</p>
+                            <p class="text-primary"><strong>R$ 1.200.000</strong></p>
+                            <a href="#" class="btn btn-primary">Ver detalhes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-3">
+        <p>&copy; 2024 Vale Imobiliária. All rights reserved.</p>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Digite seu e-mail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Digite sua senha">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Entrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
